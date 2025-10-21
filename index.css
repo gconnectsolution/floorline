@@ -519,16 +519,15 @@ img {
     font-size: 36px;
     font-weight: 500;
     line-height: 1.2;
-    color: var(--orange-950);
+    color: #000;
     margin-bottom: var(--spacing-6);
+    text-shadow: 2px 4px 14px rgb(0,0,0,0.5);
 }
 
 .section-gradient-text {
     display: block;
-    background: linear-gradient(to right, var(--orange-600), var(--rose-700));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #fff;
+    text-shadow: 2px 4px 14px rgb(0,0,0,0.5);
 }
 
 .section-subtitle {
@@ -699,9 +698,25 @@ img {
 .features-section {
     position: relative;
     padding: var(--spacing-32) 0;
-    background: linear-gradient(to bottom, var(--stone-100), var(--orange-50), var(--stone-100));
     overflow: hidden;
+    background: linear-gradient(to bottom, #fff, #aaaaaa, #000);
 }
+
+.features-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('./blue.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* adjust to desired transparency */
+    z-index: 0;
+}
+
+.features-container {
+    z-index: 1; /* ensures content sits above the background */
+}
+
 
 .features-bg {
     position: absolute;
@@ -756,6 +771,7 @@ img {
 .feature-card {
     opacity: 0;
     animation: fadeInUp 0.5s ease-out forwards;
+    box-shadow: 2px 14px 14px rgb(0,0,0,0.5);
 }
 
 .feature-card:nth-child(1) { animation-delay: 0.1s; }
@@ -854,6 +870,19 @@ img {
 @media (min-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .hero-product-item{
+        height: 50%;
+        width: 150%;
+        left: -20%;
+        top: 20%;
+    }
+
+    .product-card{
+        min-width: 100px;
     }
 }
 
