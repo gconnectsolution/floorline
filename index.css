@@ -850,6 +850,13 @@ img {
     animation: shine 0.6s ease-out;
 }
 
+.frame {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  border: 0;
+}
+
 @keyframes shine {
     to {
         left: 100%;
@@ -870,11 +877,17 @@ img {
         left: -20%;
         top: 20%;
     }
-    .product-card{
-        min-width: 50px;
+
+
+
+    .contact-card{
+        width: 100%;
     }
-    .product-card img{
-        width: 10%;
+      .frame {
+        width: 90%;          /* make it smaller on mobile */
+        height: 250px;       /* adjust height */
+        margin: 0 auto;      /* center it horizontally */
+        display: block;
     }
 }
 
