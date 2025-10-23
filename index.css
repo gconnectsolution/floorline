@@ -877,7 +877,9 @@ img {
         left: -20%;
         top: 20%;
     }
-
+    .product-card{
+        width: 100px;
+    }
 
 
     .contact-card{
