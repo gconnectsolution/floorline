@@ -15,18 +15,84 @@ mobileMenuBtn.addEventListener('click', () => {
     }
 });
 
-
 const products = [
-  { image: "laminated.webp", name: "Laminated Wooden Flooring", description: "Durable and stylish flooring with a natural wood finish." },
-  { image: "spc.webp", name: "SPC Flooring", description: "Stone Plastic Composite flooring with water resistance." },
-  { image: "engineering.webp", name: "Engineering Wood Flooring", description: "Combines strength, beauty, and stability." },
-  { image: "solidwood.webp", name: "Solid Wood", description: "Premium hardwood flooring for timeless appeal." },
-  { image: "deck.webp", name: "Deck Flooring", description: "Weather-resistant outdoor flooring." },
-  { image: "wallpaper.webp", name: "Wallpaper", description: "Elegant wallpapers for personalized interiors." },
-  { image: "wallpanel.webp", name: "Wall Panel", description: "Decorative wall panels adding depth and texture." },
-  { image: "louvers.webp", name: "Louvers, Sofit Panel", description: "Stylish louvers for modern designs." },
-  { image: "blinds.webp", name: "Blinds", description: "Functional and elegant window blinds." }
+  {
+    image: "laminated.webp",
+    name: "Laminated Wooden Flooring",
+    description: "Scratch-resistant and affordable flooring that mimics the look of real wood.",
+  },
+  {
+    image: "spc.webp",
+    name: "SPC Flooring",
+    description: "Stone Plastic Composite flooring offering 100% water resistance and durability.",
+  },
+  {
+    image: "engineering.webp",
+    name: "Engineered Wood Flooring",
+    description: "Multi-layered wood flooring that provides the elegance of hardwood with added stability.",
+  },
+  {
+    image: "solidwood.webp",
+    name: "Solid Wood Flooring",
+    description: "Authentic hardwood flooring that adds warmth, character, and long-lasting beauty.",
+  },
+  {
+    image: "wpc.webp",
+    name: "WPC Deck Flooring",
+    description: "Weatherproof WPC decking ideal for outdoor patios, balconies, and gardens.",
+  },
+  {
+    image: "wallpaper.webp",
+    name: "Wallpaper Normal & Customized ",
+    description: "Premium wallpapers available in modern, classic, and textured designs for every interior.",
+  },
+  {
+    image: "ipe.webp",
+    name: "IPE Deck Flooring",
+    description: "High-density hardwood decking known for extreme durability and natural beauty.",
+  },
+  {
+    image: "louvers.webp",
+    name: "Louvers Interior & Exterior",
+    description: "Contemporary louver designs that enhance ventilation and elevate architectural appeal.",
+  },
+  {
+    image: "blinds.webp",
+    name: "Window Blinds",
+    description: "Elegant and functional blinds for perfect light control and privacy.",
+  },
+  {
+    image: "lvt.webp",
+    name: "LVT Vinyl Flooring",
+    description: "Luxury Vinyl Tiles offering high durability, easy maintenance, and realistic wood textures.",
+  },
+  {
+    image: "soffit.webp",
+    name: "Soffit Panel",
+    description: "Durable panels used for ceilings and eaves, ensuring protection and a clean finish.",
+  },
+  {
+    image: "sheera.webp",
+    name: "Shera Plank",
+    description: "Fiber cement planks that provide a natural wood look with superior weather resistance.",
+  },
+  {
+    image: "hpl.webp",
+    name: "HPL Cladding",
+    description: "High-pressure laminate cladding ideal for exterior facades with UV and weather protection.",
+  },
+  {
+    image: "curtain.webp",
+    name: "Window Curtains",
+    description: "Stylish curtains that add warmth, texture, and privacy to your living spaces.",
+  },
+  {
+    image: "sofa.webp",
+    name: "Sofa",
+    description: "Comfortable, modern sofas designed to complement any living room decor.",
+  },
 ];
+
 
 const container = document.getElementById("products-row");
 
@@ -46,4 +112,38 @@ const heroBtn = document.getElementById('herobtn')
 heroBtn.onclick = () => {
     const targetSection = document.getElementById('products-section');
   targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+const home = document.getElementById('Home');
+const product = document.getElementById('Products');
+const choose = document.getElementById('Choose');
+const contact = document.getElementById('Contact');
+
+
+home.onclick = () => {
+    const targetSection = document.getElementById('hero');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+product.onclick = () => {
+    const targetSection = document.getElementById('products-section');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+choose.onclick = () => {
+    const targetSection = document.getElementById('whychooseus');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+contact.onclick = () => {
+  const targetSection = document.getElementById('contactus');
+  targetSection.scrollIntoView({behavior:"smooth"});
+}
+
+
+const contactBtn = document.getElementById('contact-btn');
+contactBtn.onclick = () => {
+  const phoneNumber = '+91 9886661249';
+  window.location.href = `tel:${phoneNumber}`;
 }
