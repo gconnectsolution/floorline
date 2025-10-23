@@ -255,9 +255,9 @@ img {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    /**/
+    /*
     background-image: url('./transform.webp');
-    background-size: cover;
+    background-size: cover;*/
 }
 
 .hero-product-grid {
