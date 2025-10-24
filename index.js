@@ -123,10 +123,16 @@ const product = document.getElementById('Products');
 const choose = document.getElementById('Choose');
 const contact = document.getElementById('Contact');
 
+const homeMb = document.getElementById('Home-mobile');
+const productMb = document.getElementById('Products-mobile');
+const chooseMb = document.getElementById('Choose-mobile');
+const contactMb = document.getElementById('Contact-mobile');
+
 
 home.onclick = () => {
     const targetSection = document.getElementById('hero');
   targetSection.scrollIntoView({ behavior: 'smooth' });
+  console.log('home clicked')
 }
 
 product.onclick = () => {
@@ -140,6 +146,28 @@ choose.onclick = () => {
 }
 
 contact.onclick = () => {
+  const targetSection = document.getElementById('contactus');
+  targetSection.scrollIntoView({behavior:"smooth"});
+}
+
+
+homeMb.onclick = () => {
+    const targetSection = document.getElementById('hero');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+  console.log('home clicked')
+}
+
+productMb.onclick = () => {
+    const targetSection = document.getElementById('products-section');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+chooseMb.onclick = () => {
+    const targetSection = document.getElementById('whychooseus');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+contactMb.onclick = () => {
   const targetSection = document.getElementById('contactus');
   targetSection.scrollIntoView({behavior:"smooth"});
 }
