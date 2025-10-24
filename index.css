@@ -878,17 +878,29 @@ img {
         top: 20%;
     }
     .product-card{
-        width: 100px;
+        min-width: 100px;
+    }
+
+    .product-card img {
+        width: auto;
+    }
+
+    .product-card h3{
+        font-size: 1rem;
+    }
+    .product-card p{
+        font-size: 0.8rem;
     }
 
 
     .contact-card{
         width: 100%;
     }
-      .frame {
-        width: 90%;          /* make it smaller on mobile */
-        height: 250px;       /* adjust height */
-        margin: 0 auto;      /* center it horizontally */
+
+    .frame {
+        width: 90%;    
+        height: 250px;   
+        margin: 0 auto;  
         display: block;
     }
 }
