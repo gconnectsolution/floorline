@@ -905,7 +905,7 @@ img {
     background-image: url('./wooden.webp');
     background-size: cover;
     height: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .contact-bg {
@@ -1232,7 +1232,7 @@ img {
 
 
 .product-card {
-  width: 400px;
+  width: 300px;
   min-height: 400px;
   background: #fff;
   border-radius: 12px;
