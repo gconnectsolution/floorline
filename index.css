@@ -828,6 +828,7 @@ img {
     position: absolute;
     inset: 0;
     border-radius: var(--radius-2xl);
+
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
@@ -875,13 +876,7 @@ img {
         left: -20%;
         top: 20%;
     }
-    .product-card{
-        min-width: 10px;
-    }
 
-    .product-card img {
-        width: 50%;
-    }
 
     .product-card h3{
         font-size: 1rem;
@@ -1243,7 +1238,7 @@ img {
 
 
 .product-card {
-  min-width: 500px;
+  width: 500px;
   min-height: 400px;
   background: #fff;
   border-radius: 12px;
