@@ -491,8 +491,6 @@ img {
     max-width: 100rem;
     margin: 0 auto;
     padding: 0 var(--spacing-4);
-    background-image: url('./transform.webp');
-    background-size: cover;
 }
 
 .products-container h1{
