@@ -1240,6 +1240,10 @@ img {
   -webkit-transform-style: preserve-3d;
 }
 
+@keyframes scrollLeft {
+  from { transform: translateX(0); -webkit-transform: translateX(0); }
+  to { transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+}
 
 
 .product-card {
@@ -1270,15 +1274,7 @@ img {
   color: #555;
 }
 
-/* Auto-scroll keyframes */
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
+
 
 h6{
     text-align: right;
