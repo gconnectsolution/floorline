@@ -112,71 +112,45 @@ const heroBtn = document.getElementById('herobtn')
 
 heroBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const targetSection = document.getElementById("products-section");
-  if (targetSection) {
-    targetSection.scrollIntoView({ behavior: "smooth" });
-  }
+  scrollToSectionWithOffset('products-section', 100);
 });
 
 
+// Helper function for smooth scroll with offset
+function scrollToSectionWithOffset(id, offset = 100) {
+  const element = document.getElementById(id);
+  if (!element) return;
+  const y = element.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
 
+// Desktop navigation
 const home = document.getElementById('Home');
 const product = document.getElementById('Products');
 const choose = document.getElementById('Choose');
 const contact = document.getElementById('Contact');
 
+// Mobile navigation
 const homeMb = document.getElementById('Home-mobile');
 const productMb = document.getElementById('Products-mobile');
 const chooseMb = document.getElementById('Choose-mobile');
 const contactMb = document.getElementById('Contact-mobile');
 
+// Desktop clicks
+home.onclick = () => scrollToSectionWithOffset('hero', 100);
+product.onclick = () => scrollToSectionWithOffset('products-section', 100);
+choose.onclick = () => scrollToSectionWithOffset('whychooseus', 100);
+contact.onclick = () => scrollToSectionWithOffset('contactus', 80);
 
-home.onclick = () => {
-    const targetSection = document.getElementById('hero');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-  console.log('home clicked')
-}
+// Mobile clicks
+homeMb.onclick = () => scrollToSectionWithOffset('hero', 300);
+productMb.onclick = () => scrollToSectionWithOffset('products-section', 300);
+chooseMb.onclick = () => scrollToSectionWithOffset('whychooseus', 300);
+contactMb.onclick = () => scrollToSectionWithOffset('contactus', 300);
 
-product.onclick = () => {
-    const targetSection = document.getElementById('products-section');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-choose.onclick = () => {
-    const targetSection = document.getElementById('whychooseus');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-contact.onclick = () => {
-  const targetSection = document.getElementById('contactus');
-  targetSection.scrollIntoView({behavior:"smooth"});
-}
-
-
-homeMb.onclick = () => {
-    const targetSection = document.getElementById('hero');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-  console.log('home clicked')
-}
-
-productMb.onclick = () => {
-    const targetSection = document.getElementById('products-section');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-chooseMb.onclick = () => {
-    const targetSection = document.getElementById('whychooseus');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-contactMb.onclick = () => {
-  const targetSection = document.getElementById('contactus');
-  targetSection.scrollIntoView({behavior:"smooth"});
-}
-
-
+// Contact button (phone link)
 const contactBtn = document.getElementById('contact-btn');
 contactBtn.onclick = () => {
   const phoneNumber = '+91 9886661249';
   window.location.href = `tel:${phoneNumber}`;
-}
+};
