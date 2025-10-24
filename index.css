@@ -253,7 +253,7 @@ img {
    ======================================== */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
 
 }
@@ -878,9 +878,14 @@ img {
     .product-card{
         min-width: 100px;
     }
-
+    .products-container {
+        position: relative;
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 0 var(--spacing-4);
+    }
     .product-card img {
-        width: auto;
+        width: 100%;
     }
 
     .product-card h3{

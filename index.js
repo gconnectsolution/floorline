@@ -109,10 +109,13 @@ container.innerHTML = doubledProducts.map(p => `
 
 
 const heroBtn = document.getElementById('herobtn')
-heroBtn.onclick = () => {
-    const targetSection = document.getElementById('products-section');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-}
+heroBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const targetSection = document.getElementById("products-container");
+  const y = targetSection.getBoundingClientRect().top + window.pageYOffset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+});
+
 
 
 const home = document.getElementById('Home');
