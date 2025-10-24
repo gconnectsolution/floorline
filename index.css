@@ -1207,6 +1207,15 @@ img {
   padding: 20px 0;
 }
 
+.products-behaviour{
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+.products-behaviour h1{
+    text-align: center;
+}
+
 .products-scroll {
   display: flex;
   align-items: center;
