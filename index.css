@@ -878,14 +878,6 @@ img {
     }
 
 
-    .product-card h3{
-        font-size: 1rem;
-    }
-    .product-card p{
-        font-size: 0.8rem;
-    }
-
-
     .contact-card{
         width: 100%;
     }
@@ -1238,7 +1230,7 @@ img {
 
 
 .product-card {
-  width: 500px;
+  width: 300px;
   min-height: 400px;
   background: #fff;
   border-radius: 12px;
