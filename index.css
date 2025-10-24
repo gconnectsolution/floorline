@@ -1212,6 +1212,10 @@ img {
   align-items: center;
   overflow-x: hidden;
   width: 100%;
+  flex-wrap: nowrap; /* prevent wrapping */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .products-row {
@@ -1223,6 +1227,7 @@ img {
   -webkit-transform: translate3d(0,0,0);
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
+  flex-wrap: nowrap;
 }
 
 @keyframes scrollLeft {
