@@ -901,10 +901,11 @@ img {
    ======================================== */
 .contact-section {
     position: relative;
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-image: url('./wooden.webp');
     background-size: cover;
     overflow: hidden;
+    height: auto;
 }
 
 .contact-bg {
@@ -1014,6 +1015,7 @@ img {
 .contact-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
 }
 
