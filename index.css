@@ -1232,7 +1232,7 @@ img {
 .products-row {
   display: flex;
   gap: 20px;
-  animation: scrollLeft 120s linear infinite;
+  
 }
 
 .product-card {
