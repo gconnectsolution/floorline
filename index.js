@@ -22,27 +22,27 @@ const products = [
     description: "Scratch-resistant and affordable flooring that mimics the look of real wood.",
   },
   {
-    image: "spc.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.45 PM (1).jpeg",
     name: "SPC Flooring",
     description: "Stone Plastic Composite flooring offering 100% water resistance and durability.",
   },
   {
-    image: "engineering.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.47 PM (2).jpeg",
     name: "Engineered Wood Flooring",
     description: "Multi-layered wood flooring that provides the elegance of hardwood with added stability.",
   },
   {
-    image: "solidwood.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.43 PM.jpeg",
     name: "Solid Wood Flooring",
     description: "Authentic hardwood flooring that adds warmth, character, and long-lasting beauty.",
   },
   {
-    image: "wpc.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.42 PM (1).jpeg",
     name: "WPC Deck Flooring",
     description: "Weatherproof WPC decking ideal for outdoor patios, balconies, and gardens.",
   },
   {
-    image: "wallpaper.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.47 PM (1).jpeg",
     name: "Wallpaper Normal & Customized ",
     description: "Premium wallpapers available in modern, classic, and textured designs for every interior.",
   },
@@ -57,7 +57,7 @@ const products = [
     description: "Contemporary louver designs that enhance ventilation and elevate architectural appeal.",
   },
   {
-    image: "blinds.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.59 PM (2).jpeg",
     name: "Window Blinds",
     description: "Elegant and functional blinds for perfect light control and privacy.",
   },
@@ -82,12 +82,12 @@ const products = [
     description: "High-pressure laminate cladding ideal for exterior facades with UV and weather protection.",
   },
   {
-    image: "curtain.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.51 PM (1).jpeg",
     name: "Window Curtains",
     description: "Stylish curtains that add warmth, texture, and privacy to your living spaces.",
   },
   {
-    image: "sofa.webp",
+    image: "../whatsapp/WhatsApp Image 2025-10-24 at 12.32.54 PM (1).jpeg",
     name: "Sofa",
     description: "Comfortable, modern sofas designed to complement any living room decor.",
   },
