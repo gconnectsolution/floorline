@@ -118,35 +118,35 @@ heroBtn.addEventListener("click", (e) => {
 
 
 
-//const home = document.getElementById('Home');
-//const product = document.getElementById('Products');
-//const choose = document.getElementById('Choose');
-//const contact = document.getElementById('Contact');
-//
-//
-//home.onclick = () => {
-//    const targetSection = document.getElementById('hero');
-//  targetSection.scrollIntoView({ behavior: 'smooth' });
-//}
-//
-//product.onclick = () => {
-//    const targetSection = document.getElementById('products-section');
-//  targetSection.scrollIntoView({ behavior: 'smooth' });
-//}
-//
-//choose.onclick = () => {
-//    const targetSection = document.getElementById('whychooseus');
-//  targetSection.scrollIntoView({ behavior: 'smooth' });
-//}
-//
-//contact.onclick = () => {
-//  const targetSection = document.getElementById('contactus');
-//  targetSection.scrollIntoView({behavior:"smooth"});
-//}
-//
-//
-//const contactBtn = document.getElementById('contact-btn');
-//contactBtn.onclick = () => {
-//  const phoneNumber = '+91 9886661249';
-//  window.location.href = `tel:${phoneNumber}`;
-//}
+const home = document.getElementById('Home');
+const product = document.getElementById('Products');
+const choose = document.getElementById('Choose');
+const contact = document.getElementById('Contact');
+
+
+home.onclick = () => {
+    const targetSection = document.getElementById('hero');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+product.onclick = () => {
+    const targetSection = document.getElementById('products-section');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+choose.onclick = () => {
+    const targetSection = document.getElementById('whychooseus');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+contact.onclick = () => {
+  const targetSection = document.getElementById('contactus');
+  targetSection.scrollIntoView({behavior:"smooth"});
+}
+
+
+const contactBtn = document.getElementById('contact-btn');
+contactBtn.onclick = () => {
+  const phoneNumber = '+91 9886661249';
+  window.location.href = `tel:${phoneNumber}`;
+}
