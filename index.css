@@ -905,6 +905,7 @@ img {
     background-image: url('./wooden.webp');
     background-size: cover;
     height: auto;
+    overflow-x: hidden;
 }
 
 .contact-bg {
