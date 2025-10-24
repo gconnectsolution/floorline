@@ -561,7 +561,7 @@ img {
     position: relative;
     height: 500px;
     border-radius: var(--radius-3xl);
-    overflow: hidden;
+    overflow-x: hidden;
     background: white;
     border: 1px solid rgba(254, 215, 170, 0.5);
     box-shadow: 0 25px 50px -12px hsla(21, 90%, 48%, 0.1);
@@ -1201,7 +1201,7 @@ img {
 
 .products-container {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   background: #f9f9f9;
   padding: 20px 0;
@@ -1210,7 +1210,7 @@ img {
 .products-scroll {
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 
