@@ -904,7 +904,6 @@ img {
     padding: 2rem 0;
     background-image: url('./wooden.webp');
     background-size: cover;
-    overflow: hidden;
     height: auto;
 }
 
@@ -950,7 +949,7 @@ img {
     max-width: 80rem;
     margin: 0 auto;
     padding: 0 var(--spacing-4);
-    height: 100vh;
+    height: auto;
 }
 
 .contact-grid {
