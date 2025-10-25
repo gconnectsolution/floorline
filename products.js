@@ -1,19 +1,4 @@
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuIcon = document.querySelector('.menu-icon');
-const closeIcon = document.querySelector('.close-icon');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    
-    if (mobileMenu.classList.contains('active')) {
-        menuIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-    } else {
-        menuIcon.style.display = 'block';
-        closeIcon.style.display = 'none';
-    }
-});
 const products = [
   {
     image: "laminated.webp",
@@ -106,133 +91,36 @@ const products = [
     details: "Our sofas combine comfort, contemporary design, and durability. Available in multiple fabrics, colors, and configurations, they provide the perfect centerpiece for your living room. Designed for relaxation and style, they enhance the aesthetic appeal of any space while ensuring lasting comfort."
   },
   {
-    image: "./WhatsApp Image 2025-10-24 at 12.32.54 PM (1).jpeg",
+    image: "./grass.jpg",
     name: "Artificial Grass",
     description: "Comfortable, modern sofas designed to complement any living room decor.",
     details: "Our sofas combine comfort, contemporary design, and durability. Available in multiple fabrics, colors, and configurations, they provide the perfect centerpiece for your living room. Designed for relaxation and style, they enhance the aesthetic appeal of any space while ensuring lasting comfort."
   },
 ];
-
-const container = document.getElementById("products-row");
-const popupOverlay = document.getElementById("popupOverlay");
-const popupImage = document.getElementById("popupImage");
-const popupName = document.getElementById("popupName");
-const popupDescription = document.getElementById("popupDescription");
-const closePopup = document.getElementById("closePopup");
-
-// Duplicate products for seamless looping
-const doubledProducts = [...products, ...products];
-
-// Render product cards with data-index attribute
-container.innerHTML = doubledProducts.map((p, index) => `
-  <div class="product-card" data-index="${index % products.length}">
-    <img src="${p.image}" alt="${p.name}">
-    <h3>${p.name}</h3>
-    <p>${p.description}</p>
-  </div>
-`).join("");
-
-// Flag to control scrolling
-let isScrolling = true;
-
-// Open popup on card click and stop scrolling
-container.addEventListener("click", (e) => {
-  const card = e.target.closest(".product-card");
-  if (!card) return;
-
-  const index = parseInt(card.dataset.index); // Get the index from data-index
-  const product = products[index]; // Access the product from the original products array
-  if (!product) {
-    console.error("Product not found for index:", index);
-    return;
-  }
-
-  popupImage.src = product.image;
-  popupName.textContent = product.name;
-  popupDescription.textContent = product.details;
-
-  popupOverlay.style.display = "flex";
-  isScrolling = false; // Stop scrolling when popup is opened
-});
-
-// Close popup and resume scrolling
-closePopup.addEventListener("click", () => {
-  popupOverlay.style.display = "none";
-  isScrolling = true; // Resume scrolling when popup is closed
-});
-
-popupOverlay.addEventListener("click", (e) => {
-  if (e.target === popupOverlay) {
-    popupOverlay.style.display = "none";
-    isScrolling = true; // Resume scrolling when popup is closed
-  }
-});
-
-// Auto-scroll using transform for iOS compatibility
-let position = 0;
-const speed = 0.3; // Adjust scroll speed (pixels/frame)
-
-function scrollLoop() {
-  if (isScrolling) {
-    position -= speed;
-    const totalWidth = container.scrollWidth / 2;
-
-    // Reset back to start seamlessly
-    if (Math.abs(position) >= totalWidth) {
-      position = 0;
-    }
-
-    container.style.transform = `translateX(${position}px)`;
-  }
-  requestAnimationFrame(scrollLoop);
+const productInfoContainer = document.querySelector(".product-info-container");
+if (productInfoContainer) {
+  productInfoContainer.innerHTML = products.map((p, index) => {
+    const isOddIndex = index % 2 === 0;
+    return `
+      <div class="product-info-card">
+        ${isOddIndex ? `
+          <div class="product-info-details">
+            <h2>${p.name}</h2>
+            <p>${p.details}</p>
+          </div>
+          <div class="product-info-image">
+            <img src="${p.image}" alt="${p.name}">
+          </div>
+        ` : `
+          <div class="product-info-image">
+            <img src="${p.image}" alt="${p.name}">
+          </div>
+          <div class="product-info-details">
+            <h2>${p.name}</h2>
+            <p>${p.details}</p>
+          </div>
+        `}
+      </div>
+    `;
+  }).join("");
 }
-
-// Start animation after a short delay
-setTimeout(scrollLoop, 300);
-
-const heroBtn = document.getElementById('herobtn')
-
-heroBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = './products.html';
-});
-
-
-// Helper function for smooth scroll with offset
-function scrollToSectionWithOffset(id, offset = 100) {
-  const element = document.getElementById(id);
-  if (!element) return;
-  const y = element.getBoundingClientRect().top + window.scrollY - offset;
-  window.scrollTo({ top: y, behavior: 'smooth' });
-}
-
-// Desktop navigation
-const home = document.getElementById('Home');
-const product = document.getElementById('Products');
-const choose = document.getElementById('Choose');
-const contact = document.getElementById('Contact');
-
-// Mobile navigation
-const homeMb = document.getElementById('Home-mobile');
-const productMb = document.getElementById('Products-mobile');
-const chooseMb = document.getElementById('Choose-mobile');
-const contactMb = document.getElementById('Contact-mobile');
-
-// Desktop clicks
-home.onclick = () => scrollToSectionWithOffset('hero', 100);
-product.onclick = () => window.location.href = './products.html';
-choose.onclick = () => scrollToSectionWithOffset('whychooseus', 100);
-contact.onclick = () => scrollToSectionWithOffset('contactus', 80);
-
-// Mobile clicks
-homeMb.onclick = () => scrollToSectionWithOffset('hero', 300);
-productMb.onclick = () => window.location.href = './products.html';
-chooseMb.onclick = () => scrollToSectionWithOffset('whychooseus', 300);
-contactMb.onclick = () => scrollToSectionWithOffset('contactus', 300);
-
-// Contact button (phone link)
-const contactBtn = document.getElementById('contact-btn');
-contactBtn.onclick = () => {
-  const phoneNumber = '+91 9886661249';
-  window.location.href = `tel:${phoneNumber}`;
-};

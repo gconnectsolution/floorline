@@ -1,0 +1,402 @@
+/* Reset and Root Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Terracotta & Mediterranean */
+    --orange-50: #fff7ed;
+    --orange-100: #ffedd5;
+    --orange-200: #fed7aa;
+    --orange-300: #fdba74;
+    --orange-400: #fb923c;
+    --orange-500: #f97316;
+    --orange-600: #ea580c;
+    --orange-700: #c2410c;
+    --orange-800: #9a3412;
+    --orange-900: #7c2d12;
+    --orange-950: #431407;
+    
+    --amber-50: #fffbeb;
+    --amber-100: #fef3c7;
+    --amber-200: #fde68a;
+    
+    --rose-200: #fecdd3;
+    --rose-300: #fda4af;
+    --rose-400: #fb7185;
+    --rose-600: #e11d48;
+    --rose-700: #be123c;
+    
+    --stone-50: #fafaf9;
+    --stone-100: #f5f5f4;
+    --stone-200: #e7e5e4;
+    --stone-300: #d6d3d1;
+    --stone-400: #a8a29e;
+    --stone-500: #78716c;
+    --stone-600: #57534e;
+    --stone-700: #44403c;
+    
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    --spacing-32: 8rem;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 1.75rem;
+    --radius-full: 9999px;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--stone-50);
+  color: var(--stone-700);
+  line-height: 1.6;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    
+    border-bottom: 1px solid rgba(234, 88, 12, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    background: none;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--orange-900);
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-desktop {
+    display: none;
+    gap: var(--spacing-1);
+}
+
+.nav-item {
+    padding: var(--spacing-2) var(--spacing-3);
+    color: var(--stone-700);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.nav-item:hover {
+    color: var(--orange-800);
+    background-color: var(--orange-50);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.05s; }
+.nav-item:nth-child(2) { animation-delay: 0.1s; }
+.nav-item:nth-child(3) { animation-delay: 0.15s; }
+.nav-item:nth-child(4) { animation-delay: 0.2s; }
+.nav-item:nth-child(5) { animation-delay: 0.25s; }
+.nav-item:nth-child(6) { animation-delay: 0.3s; }
+.nav-item:nth-child(7) { animation-delay: 0.35s; }
+.nav-item:nth-child(8) { animation-delay: 0.4s; }
+.nav-item:nth-child(9) { animation-delay: 0.45s; }
+
+.nav-mobile-toggle {
+    display: none;
+}
+
+.mobile-menu-btn {
+    color: var(--orange-900);
+    padding: var(--spacing-2);
+    border-radius: var(--radius-lg);
+    transition: background-color 0.3s ease;
+}
+
+
+
+.nav-mobile {
+    display: none;
+    padding-bottom: var(--spacing-4);
+}
+
+.nav-mobile.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+.nav-item-mobile {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: var(--spacing-3) var(--spacing-4);
+    color: var(--stone-700);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-1);
+}
+
+.nav-item-mobile:hover {
+    color: var(--orange-800);
+    background-color: var(--orange-50);
+}
+
+/* Desktop Navigation - Show on XL screens */
+@media (min-width: 1280px) {
+    .nav-desktop {
+        display: flex;
+    }
+    
+    .nav-mobile-toggle {
+        display: none;
+    }
+}
+
+/* Product Info Section */
+.product-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    padding: 1rem;
+}
+
+.product-services {
+  position: relative;
+  padding: 4rem;
+  background-image: url('WhatsApp Image 2025-10-24 at 12.33.06 PM.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* Add a dark overlay */
+.product-services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjust to control darkness */
+  z-index: 1;
+}
+
+/* Keep text bright and above overlay */
+.product-services p {
+  position: relative;
+  top: 25%;
+  z-index: 2;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 4px 5px #000;
+}
+
+
+
+.product-info {
+  text-align: center;
+
+}
+
+.product-info h1 {
+  font-size: 2.5em;
+  background: linear-gradient(to right, var(--orange-600), var(--rose-600), var(--orange-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 35%;
+}
+
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-info-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--orange-50);
+  overflow: hidden;
+}
+
+.product-info-details {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #dd7d5d;
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+
+.product-info-image {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-6);
+  background-color: var(--stone-50);
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+
+.product-info-image img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: transform 0.3s ease;
+  box-shadow: -14px 14px 0px #9a3412;
+}
+
+
+.product-info-details h2 {
+  margin: var(--spacing-2) 0;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: left !important;
+}
+
+.product-info-details p {
+  margin: var(--spacing-2) 0;
+  font-size: 1em;
+  color: #fff;
+  text-align: left;
+  max-width: 80%;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--spacing-6);
+  background-color: var(--orange-800);
+  color: var(--stone-50);
+}
+
+#contact-btn {
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--rose-600);
+  color: var(--stone-50);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+#contact-btn:hover {
+  background-color: var(--rose-700);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-info-card {
+    height: 100vh;
+  }
+  .product-info-details,
+  .product-info-image {
+    height: 50vh;
+  }
+  .product-info-details h2 {
+    font-size: 1.2em;
+  }
+  .product-info-details p {
+    font-size: 0.9em;
+  }
+  .navbar {
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+  .logo img {
+    height: var(--spacing-10);
+  }
+  .nav-menu li a {
+    font-size: 1em;
+  }
+  .desktop-menu li {
+    margin-left: var(--spacing-4);
+  }
+}
