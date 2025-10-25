@@ -107,6 +107,18 @@ container.innerHTML = doubledProducts.map(p => `
   </div>
 `).join('');
 
+const scrollContainer = document.querySelector(".products-scroll");
+let scrollSpeed = 0.5; // pixels per frame (adjust speed here)
+
+function autoScroll() {
+  scrollContainer.scrollLeft += scrollSpeed;
+  if (scrollContainer.scrollLeft >= container.scrollWidth / 2) {
+    scrollContainer.scrollLeft = 0; // Reset for infinite loop
+  }
+  requestAnimationFrame(autoScroll);
+}
+
+autoScroll();
 
 const heroBtn = document.getElementById('herobtn')
 

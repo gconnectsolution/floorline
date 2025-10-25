@@ -1227,7 +1227,6 @@ img {
 .products-row {
   display: flex;
   gap: 20px;
-  animation: scrollLeft 120s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0,0,0);
