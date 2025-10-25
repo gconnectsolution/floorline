@@ -1221,7 +1221,7 @@ img {
   align-items: center;
   overflow-x: hidden;
   width: 100%;
-  
+  white-space: nowrap;
 }
 
 .products-row {
