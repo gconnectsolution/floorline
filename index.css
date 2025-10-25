@@ -877,7 +877,7 @@ img {
         top: 20%;
     }
 
-
+    
     .contact-card{
         width: 100%;
     }
@@ -1219,9 +1219,9 @@ img {
 .products-scroll {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
   width: 100%;
-  white-space: nowrap;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .products-row {

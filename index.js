@@ -93,10 +93,9 @@ const products = [
   },
 ];
 
-
 const container = document.getElementById("products-row");
 
-// Duplicate items for seamless loop
+// Duplicate products for seamless looping
 const doubledProducts = [...products, ...products];
 
 container.innerHTML = doubledProducts.map(p => `
@@ -105,20 +104,27 @@ container.innerHTML = doubledProducts.map(p => `
     <h3>${p.name}</h3>
     <p>${p.description}</p>
   </div>
-`).join('');
+`).join("");
 
-const scrollContainer = document.querySelector(".products-scroll");
-let scrollSpeed = 0.5; // pixels per frame (adjust speed here)
+// Auto-scroll using transform for iOS compatibility
+let position = 0;
+const speed = 0.3; // Adjust scroll speed (pixels/frame)
 
-function autoScroll() {
-  scrollContainer.scrollLeft += scrollSpeed;
-  if (scrollContainer.scrollLeft >= container.scrollWidth / 2) {
-    scrollContainer.scrollLeft = 0; // Reset for infinite loop
+function scrollLoop() {
+  position -= speed;
+  const totalWidth = container.scrollWidth / 2;
+
+  // Reset back to start seamlessly
+  if (Math.abs(position) >= totalWidth) {
+    position = 0;
   }
-  requestAnimationFrame(autoScroll);
+
+  container.style.transform = `translateX(${position}px)`;
+  requestAnimationFrame(scrollLoop);
 }
 
-autoScroll();
+// Start animation after a short delay
+setTimeout(scrollLoop, 300);
 
 const heroBtn = document.getElementById('herobtn')
 
