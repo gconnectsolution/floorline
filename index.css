@@ -183,7 +183,7 @@ img {
 .nav-item:nth-child(9) { animation-delay: 0.45s; }
 
 .nav-mobile-toggle {
-    display: block;
+    display: none;
 }
 
 .mobile-menu-btn {
@@ -877,7 +877,9 @@ img {
         top: 20%;
     }
 
-    
+    .nav-mobile-toggle {
+        display: block;
+    }
     .contact-card{
         width: 100%;
     }
@@ -1199,6 +1201,52 @@ img {
     transform: translateY(0);
 }
 
+/* Popup Styles */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  gap: 2rem;
+}
+
+.popup img {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .products-container {
   width: 100%;
   overflow-x: hidden;
@@ -1223,6 +1271,8 @@ img {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
+
+
 
 .products-row {
   display: flex;
@@ -1249,6 +1299,7 @@ img {
   padding: 16px;
   text-align: center;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .product-card img {

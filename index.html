@@ -7,6 +7,11 @@
     <meta name="description" content="Floor Line offers premium flooring solutions in Bangalore — from laminated wooden flooring to SPC, engineered wood, wall panels, and elegant wallpapers. Transform your living space today!">
     <meta name="keywords" content="flooring in Bangalore, laminated wooden flooring, SPC flooring, engineered wood, deck flooring, wall panels, wallpaper Bangalore, Floor Line, premium flooring solutions, interior design Bangalore">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     
 </head>
 <body>
@@ -122,6 +127,18 @@
         <h1>Our Products</h1>
         <div class="products-scroll">
             <div class="products-row" id="products-row"></div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="close-btn" id="closePopup">
+                <i class="fa-solid fa-xmark" style="color: #000000;"></i>
+            </button>
+            <img id="popupImage" src="" alt="">
+            <h2 id="popupName"></h2>
+            <p id="popupDescription"></p>
         </div>
     </div>
 
