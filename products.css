@@ -242,10 +242,11 @@ body {
   position: relative;
   padding: 4rem;
   background-image: url('WhatsApp Image 2025-10-24 at 12.33.06 PM.jpeg');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: cover;
   height: 85vh;
   overflow: hidden;
+  width: 100%;
 }
 
 /* Add a dark overlay */
@@ -256,7 +257,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* adjust to control darkness */
+  background-color: rgba(0, 0, 0, 0.7); /* adjust to control darkness */
   z-index: 1;
 }
 
@@ -266,9 +267,9 @@ body {
   z-index: 2;
   font-size: 2rem;
   color: #fff;
-  font-weight: 400;
+  font-weight: 300;
   text-shadow: 2px 4px 5px #000;
-  text-align: left;
+  
 }
 
 /* Keep text bright and above overlay */
@@ -278,9 +279,9 @@ body {
   z-index: 2;
   font-size: 1.5rem;
   color: #fff;
-  font-weight: 300;
+  font-weight: 200;
   text-shadow: 2px 4px 5px #000;
-  text-align: left;
+
 }
 
 
@@ -322,11 +323,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 10px;
-  background-color: #9a3412;
+  background-color: #c9512a;
   transition: background-color 0.3s ease;
   width: 50%;
+  padding-left: 6rem;
 }
 
 
@@ -342,6 +344,32 @@ body {
 }
 
 
+.product-info-details-two {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  padding-left: 6rem;
+}
+
+
+.product-info-image-two {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-6);
+  background-color: #b3b3b3;
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+
 .product-info-image img {
   max-width: 80%;
   max-height: 80%;
@@ -351,18 +379,44 @@ body {
   box-shadow: -14px 14px 0px #9a3412;
 }
 
+.product-info-image-two img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: transform 0.3s ease;
+  box-shadow: -14px 14px 0px #000000;
+}
+
 
 .product-info-details h2 {
-  margin: var(--spacing-2) 0;
-  font-size: 1.5em;
-  color: #fff;
+  font-size: 2em;
+  font-weight: 600;
+  color: #812100;
   text-align: left !important;
+  max-width: 80%;
 }
 
 .product-info-details p {
   margin: var(--spacing-2) 0;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
+  text-align: left;
+  max-width: 80%;
+}
+
+.product-info-details-two h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #812100;
+  text-align: left !important;
+  max-width: 80%;
+}
+
+.product-info-details-two p {
+  margin: var(--spacing-2) 0;
+  font-size: 1.2em;
+  color: #000000;
   text-align: left;
   max-width: 80%;
 }

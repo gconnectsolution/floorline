@@ -112,10 +112,10 @@ if (productInfoContainer) {
             <img src="${p.image}" alt="${p.name}">
           </div>
         ` : `
-          <div class="product-info-image">
+          <div class="product-info-image-two">
             <img src="${p.image}" alt="${p.name}">
           </div>
-          <div class="product-info-details">
+          <div class="product-info-details-two">
             <h2>${p.name}</h2>
             <p>${p.details}</p>
           </div>
