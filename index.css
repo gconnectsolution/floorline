@@ -77,6 +77,20 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Default state (before visible) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+/* When in view */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 button {
     border: none;
     background: none;
@@ -119,8 +133,8 @@ img {
 }
 
 .logo h1 {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 300;
     line-height: 1.5;
     color: var(--orange-900);
     letter-spacing: 0.05em;
@@ -498,6 +512,15 @@ img {
 .products-container h1{
     text-align: center;
 }
+.products-subtext {
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0.5rem auto 2rem;
+  line-height: 1.6;
+}
+
 
 .section-header {
     text-align: center;
@@ -893,7 +916,14 @@ img {
         margin: 0 auto;  
         display: block;
     }
+
+    .contact-section{
+        height: auto !important;
+        overflow: none;
+    }
 }
+
+
 
 @media (min-width: 1024px) {
     .features-grid {
@@ -909,7 +939,7 @@ img {
     padding: 1.5rem 0;
     background-image: url('./wooden.webp');
     background-size: cover;
-    height: auto;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -1157,9 +1187,8 @@ img {
 .footer {
     position: relative;
     border-top: 1px solid rgba(254, 215, 170, 0.5);
-    background-image: url('./transform.webp');
-    background-size: cover;
-    padding: var(--spacing-12) 0;
+    padding: var(--spacing-12) 5rem;
+    background-color: #ff7835;
     height: 90vh;
 }
 
@@ -1170,16 +1199,18 @@ img {
 }
 
 .footer-details{
-    width: 50%;
+    width: 50% ;
     padding: 4rem 1rem;
+    text-align: left;
 }
 
 .footer-details h1{
     color: #7c2d12;
+    font-weight: 500;
 }
 
 .footer-details p{
-    color: #000 !important;
+    color: #ffffff !important;
 }
 
 .footer-container {
@@ -1192,6 +1223,87 @@ img {
 }
 
 .footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #431407;
+    padding: 8px;
+}
+
+.footer-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.footer-details {
+  flex: 2;
+  z-index: 10;
+}
+
+
+
+.card-holder {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card-holder {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+/* Default: straight */
+.card1,
+.card2,
+.card3 {
+  transform: rotate(0deg) translateX(0);
+}
+
+/* On hover: fan out */
+.card-holder:hover .card1 {
+  transform: rotate(-15deg) translateX(-50px);
+  z-index: 1;
+}
+
+.card-holder:hover .card2 {
+  transform: rotate(0deg);
+  z-index: 2;
+}
+
+.card-holder:hover .card3 {
+  transform: rotate(15deg) translateX(50px);
+  z-index: 3;
+}
+
+.footer-content p{
+    color: #ffffff !important;
     text-align: center;
 }
 
@@ -1208,6 +1320,26 @@ img {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .footer{
+        height: auto;
+    }
+    .footer-row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        top: -10%;
+        left: 25%;
+    }
+    .footer{
+        padding: 1rem 0;
+    }
+    .footer-details{
+        width: 100%;
+    }
 }
 
 /* ========================================
@@ -1347,8 +1479,16 @@ img {
 
 h6{
     text-align: right;
+    color: #fff;
 }
 
 h6 span{
     font-size: 1rem;
+    color: #fff;
+}
+
+.line {
+  border: none;             
+  height: 3px;              
+  background-color: #ffffff;    
 }

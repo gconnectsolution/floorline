@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar animate-on-scroll">
         <div class="nav-container">
             <div class="nav-content">
                 <!-- Logo -->
@@ -58,7 +58,7 @@
         </div>
     </nav>
 
-     <section id="hero" class="hero-section">
+     <section id="hero" class="hero-section ">
         <!-- Background Gradients -->
         <div class="hero-bg-gradient"></div>
         <div class="hero-bg-overlay"></div>
@@ -123,15 +123,19 @@
         </div>
     </section>-->
 
-    <div class="products-behaviour" id = 'products-section'>
+    <div class="products-behaviour animate-on-scroll" id = 'products-section'>
         <h1>Our Products</h1>
+        <p class="products-subtext">
+            Looking to transform your space? Explore our full range of flooring, wall, 
+            and decor solutions and let us help you bring your vision to life.
+        </p>
         <div class="products-scroll">
             <div class="products-row" id="products-row"></div>
         </div>
     </div>
 
     <!-- Product Modal -->
-    <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-overlay animate-on-scroll" id="popupOverlay">
         <div class="popup">
             <button class="close-btn" id="closePopup">
                 <i class="fa-solid fa-xmark" style="color: #000000;"></i>
@@ -142,7 +146,7 @@
         </div>
     </div>
 
-    <section class="features-section">
+    <section class="features-section animate-on-scroll">
         <!-- Animated Background Elements 
         <div class="features-bg">
             <div class="features-blob features-blob-1"></div>
@@ -218,7 +222,7 @@
         </div>
     </section>
 
-    <section class="contact-section" id = 'contactus'>
+    <section class="contact-section animate-on-scroll" id = 'contactus'>
         <!-- 3D Background Elements -->
         <div class="contact-bg">
             <div class="contact-blob contact-blob-1"></div>
@@ -318,24 +322,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer animate-on-scroll">
         <div  class = 'footer-logo'>
             <img src = 'icon.png'>
         </div>
-        <hr/>
-        <div class="footer-details">
-            <h1>Floor Line</h1>
-            <p>
-                We are here to transform your house into the best-looking one with our decorative and 
-                fantastic flooring and wallpaper services. With our amazing team, 
-                we provide an extensive range of solutions, 
-                including premium flooring options, elegant wallpapers, stylish wall panels, 
-                innovative decking, sophisticated louvers and soffit designs, 
-                as well as exquisite blinds. 
-                And that’s just the beginning, discover many more products to elevate your living space!
-            </p>
+        <hr class="line"/>
+        <div class="footer-row">
+            <div class="footer-details">
+                <h1>Floor Line</h1>
+                <p>
+                    We are here to transform your house into the best-looking one with our decorative and 
+                    fantastic flooring and wallpaper services. With our amazing team, 
+                    we provide an extensive range of solutions, 
+                    including premium flooring options, elegant wallpapers, stylish wall panels, 
+                    innovative decking, sophisticated louvers and soffit designs, 
+                    as well as exquisite blinds. 
+                    And that’s just the beginning, discover many more products to elevate your living space!
+                </p>
+            </div>
+            <div class="card-holder">
+                <img src="./lvt.webp" alt="Card 1" class="card card1">
+                <img src="./spc.webp" alt="Card 2" class="card card2">
+                <img src="./soffit.webp" alt="Card 3" class="card card3">
+            </div>      
+
         </div>
-        <hr/>
+        <hr class="line"/>
         <div class="footer-container">
             
             <div class="footer-content">
@@ -345,7 +357,6 @@
         </div>
         <h6>Developed by <span>G connect Solutions</span></h6>
     </footer>
-
 
     <script src = 'index.js'></script>
 </body>

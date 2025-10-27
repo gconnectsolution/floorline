@@ -233,6 +233,7 @@ body {
 .product-header{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 25px;
     padding: 1rem;
@@ -291,13 +292,30 @@ body {
 
 }
 
+.product-back{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap:2rem;
+}
+
+.product-logo h2{
+  color: var(--orange-900);
+  letter-spacing: 0.05em;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
 .product-info h1 {
   font-size: 2.5em;
   background: linear-gradient(to right, var(--orange-600), var(--rose-600), var(--orange-700));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-left: 35%;
+  text-align: center !important;
+  font-weight: 300;
 }
 
 .product-info-container {
@@ -376,6 +394,7 @@ body {
   object-fit: contain;
   border-radius: var(--radius-sm);
   transition: transform 0.3s ease;
+  object-fit: cover;
   box-shadow: -14px 14px 0px #9a3412;
 }
 
@@ -384,6 +403,7 @@ body {
   max-height: 80%;
   object-fit: contain;
   border-radius: var(--radius-sm);
+  object-fit: cover;
   transition: transform 0.3s ease;
   box-shadow: -14px 14px 0px #000000;
 }
@@ -408,7 +428,7 @@ body {
 .product-info-details-two h2 {
   font-size: 2em;
   font-weight: 600;
-  color: #812100;
+  color: #000000;
   text-align: left !important;
   max-width: 80%;
 }
@@ -479,10 +499,21 @@ footer {
     height: 50vh;
     width: 100%;
   }
+  .product-info-details-two,
+  .product-info-image-two {
+    height: 50vh;
+    width: 100%;
+  }
   .product-info-details h2 {
     font-size: 1.2em;
   }
   .product-info-details p {
+    font-size: 0.9em;
+  }
+    .product-info-details-two h2 {
+    font-size: 1.2em;
+  }
+  .product-info-details-two p {
     font-size: 0.9em;
   }
   .navbar {
@@ -504,7 +535,7 @@ footer {
 .product-info-card {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .product-header.visible,

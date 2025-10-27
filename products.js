@@ -93,8 +93,8 @@ const products = [
   {
     image: "./grass.jpg",
     name: "Artificial Grass",
-    description: "Comfortable, modern sofas designed to complement any living room decor.",
-    details: "Our sofas combine comfort, contemporary design, and durability. Available in multiple fabrics, colors, and configurations, they provide the perfect centerpiece for your living room. Designed for relaxation and style, they enhance the aesthetic appeal of any space while ensuring lasting comfort."
+    description: "Premium synthetic turf that brings a lush, natural look to your space without the need for watering or maintenance.",
+    details: "Our artificial grass offers the perfect blend of durability, realism, and low maintenance. Made with UV-resistant fibers and advanced drainage technology, it stays green and vibrant all year long—ideal for gardens, balconies, playgrounds, or commercial landscapes. Enjoy the look and feel of natural grass without the upkeep, mud, or mowing."
   },
 ];
 const productInfoContainer = document.querySelector(".product-info-container");

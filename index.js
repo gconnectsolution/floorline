@@ -106,10 +106,10 @@ const products = [
     details: "Our sofas combine comfort, contemporary design, and durability. Available in multiple fabrics, colors, and configurations, they provide the perfect centerpiece for your living room. Designed for relaxation and style, they enhance the aesthetic appeal of any space while ensuring lasting comfort."
   },
   {
-    image: "./WhatsApp Image 2025-10-24 at 12.32.54 PM (1).jpeg",
+    image: "./grass.jpg",
     name: "Artificial Grass",
-    description: "Comfortable, modern sofas designed to complement any living room decor.",
-    details: "Our sofas combine comfort, contemporary design, and durability. Available in multiple fabrics, colors, and configurations, they provide the perfect centerpiece for your living room. Designed for relaxation and style, they enhance the aesthetic appeal of any space while ensuring lasting comfort."
+    description: "Premium synthetic turf that brings a lush, natural look to your space without the need for watering or maintenance.",
+    details: "Our artificial grass offers the perfect blend of durability, realism, and low maintenance. Made with UV-resistant fibers and advanced drainage technology, it stays green and vibrant all year long—ideal for gardens, balconies, playgrounds, or commercial landscapes. Enjoy the look and feel of natural grass without the upkeep, mud, or mowing."
   },
 ];
 
@@ -221,14 +221,14 @@ const contactMb = document.getElementById('Contact-mobile');
 // Desktop clicks
 home.onclick = () => scrollToSectionWithOffset('hero', 100);
 product.onclick = () => window.location.href = './products.html';
-choose.onclick = () => scrollToSectionWithOffset('whychooseus', 100);
-contact.onclick = () => scrollToSectionWithOffset('contactus', 80);
+choose.onclick = () => scrollToSectionWithOffset('whychooseus', 150);
+contact.onclick = () => scrollToSectionWithOffset('contactus', 81);
 
 // Mobile clicks
 homeMb.onclick = () => scrollToSectionWithOffset('hero', 300);
 productMb.onclick = () => window.location.href = './products.html';
-chooseMb.onclick = () => scrollToSectionWithOffset('whychooseus', 300);
-contactMb.onclick = () => scrollToSectionWithOffset('contactus', 300);
+chooseMb.onclick = () => scrollToSectionWithOffset('whychooseus', 310);
+contactMb.onclick = () => scrollToSectionWithOffset('contactus', 310);
 
 // Contact button (phone link)
 const contactBtn = document.getElementById('contact-btn');
@@ -236,3 +236,17 @@ contactBtn.onclick = () => {
   const phoneNumber = '+91 9886661249';
   window.location.href = `tel:${phoneNumber}`;
 };
+// Scroll animation observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.2 } // Trigger when 20% of element is visible
+);
+
+// Target all elements you want to animate
+document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
