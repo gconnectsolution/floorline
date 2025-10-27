@@ -939,7 +939,7 @@ img {
     padding: 1.5rem 0;
     background-image: url('./wooden.webp');
     background-size: cover;
-    height: 90vh;
+    height: auto;
     overflow: hidden;
 }
 
@@ -1189,7 +1189,7 @@ img {
     border-top: 1px solid rgba(254, 215, 170, 0.5);
     padding: var(--spacing-12) 5rem;
     background-color: #ff7835;
-    height: 91vh;
+    height: 100vh;
 }
 
 .footer-logo{
@@ -1235,7 +1235,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 
@@ -1259,10 +1259,10 @@ img {
 
 .card {
   position: absolute;
-  top: -25%;
+  top: -38%;
   left: 10%;
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
