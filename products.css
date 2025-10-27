@@ -67,6 +67,7 @@ body {
   background-color: var(--stone-50);
   color: var(--stone-700);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -224,6 +225,10 @@ body {
     }
 }
 
+.fa-arrow-left{
+  cursor: pointer;
+}
+
 /* Product Info Section */
 .product-header{
     display: flex;
@@ -255,14 +260,27 @@ body {
   z-index: 1;
 }
 
-/* Keep text bright and above overlay */
-.product-services p {
+.product-services h2{
   position: relative;
-  top: 25%;
+  top: 15%;
   z-index: 2;
   font-size: 2rem;
   color: #fff;
+  font-weight: 400;
   text-shadow: 2px 4px 5px #000;
+  text-align: left;
+}
+
+/* Keep text bright and above overlay */
+.product-services p {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 2px 4px 5px #000;
+  text-align: left;
 }
 
 
@@ -306,7 +324,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #dd7d5d;
+  background-color: #9a3412;
   transition: background-color 0.3s ease;
   width: 50%;
 }
@@ -318,7 +336,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: var(--spacing-6);
-  background-color: var(--stone-50);
+  background-color: #ffb48e;
   transition: background-color 0.3s ease;
   width: 50%;
 }
@@ -374,12 +392,38 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .product-info h1 {
+    font-size: 1.5em;
+    margin-left: 15%;
+  }
+
+  .product-info-container{
+    width: 100%;
+  }
   .product-info-card {
+    flex-direction: column;
     height: 100vh;
   }
+  .product-services{
+    height: 50vh;
+    padding: 1rem;
+  }
+
+  .product-services h2{
+    text-align: center;
+    font-size: 1.3rem;
+    top: 0;
+  }
+  .product-services p{
+    text-align: center;
+    font-size: 1.1rem;
+    top: 5%;
+  }
+
   .product-info-details,
   .product-info-image {
     height: 50vh;
+    width: 100%;
   }
   .product-info-details h2 {
     font-size: 1.2em;
@@ -399,4 +443,27 @@ footer {
   .desktop-menu li {
     margin-left: var(--spacing-4);
   }
+}
+
+.product-header,
+.product-services,
+.product-info-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.product-header.visible,
+.product-services.visible,
+.product-info-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: subtle staggered effect for product cards */
+.product-info-card:nth-child(odd).visible {
+  transition-delay: 0.1s;
+}
+.product-info-card:nth-child(even).visible {
+  transition-delay: 0.2s;
 }

@@ -74,6 +74,7 @@ body {
     background-color: var(--stone-100);
     color: var(--stone-700);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 button {

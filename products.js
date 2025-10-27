@@ -124,3 +124,28 @@ if (productInfoContainer) {
     `;
   }).join("");
 }
+
+const back = document.getElementById('back-btn')
+back.onclick = () => {
+  window.location.href = 'index.html'
+}
+
+// Animate elements when they enter the viewport
+function animateOnScroll() {
+  const elements = document.querySelectorAll(
+    '.product-header, .product-services, .product-info-card'
+  );
+
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+// Trigger on load and scroll
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
