@@ -81,7 +81,7 @@ body {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(60px);
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* When in view */
@@ -1270,7 +1270,7 @@ img {
 
 .card {
   position: absolute;
-  left: 50%;
+  left: 30%;
   width: 150px;
   height: 200px;
   border-radius: 10px;
@@ -1288,7 +1288,7 @@ img {
 
 /* On hover: fan out */
 .card-holder:hover .card1 {
-  transform: rotate(-15deg) translateX(-50px);
+  transform: rotate(-25deg) translateX(-100px);
   z-index: 1;
 }
 
@@ -1298,7 +1298,7 @@ img {
 }
 
 .card-holder:hover .card3 {
-  transform: rotate(15deg) translateX(50px);
+  transform: rotate(25deg) translateX(100px);
   z-index: 3;
 }
 

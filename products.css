@@ -270,7 +270,6 @@ body {
   color: #fff;
   font-weight: 300;
   text-shadow: 2px 4px 5px #000;
-  
 }
 
 /* Keep text bright and above overlay */
@@ -468,7 +467,7 @@ footer {
 @media (max-width: 768px) {
   .product-info h1 {
     font-size: 1.5em;
-    margin-left: 15%;
+    gap: 1rem;
   }
 
   .product-info-container{
@@ -485,13 +484,13 @@ footer {
 
   .product-services h2{
     text-align: center;
-    font-size: 1.3rem;
-    top: 0;
+    font-size: 1.1rem;
+    top: 15%;
   }
   .product-services p{
     text-align: center;
-    font-size: 1.1rem;
-    top: 5%;
+    font-size: 0.8rem;
+    top: 25%;
   }
 
   .product-info-details,
@@ -528,6 +527,11 @@ footer {
   .desktop-menu li {
     margin-left: var(--spacing-4);
   }
+  .product-logo h2{
+    font-size: 18px;
+  }
+
+
 }
 
 .product-header,

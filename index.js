@@ -64,7 +64,7 @@ const products = [
     details: "Our louvers are engineered for both interior and exterior applications, enhancing airflow while offering privacy and aesthetic appeal. Available in multiple materials, finishes, and styles, they provide a sleek architectural element that adds both functionality and visual interest to any space."
   },
   {
-    image: "./WhatsApp Image 2025-10-24 at 12.32.59 PM (2).jpeg",
+    image: "./WhatsApp Image 2025-10-24 at 12.33.04 PM.jpeg",
     name: "Window Blinds",
     description: "Elegant and functional blinds for perfect light control and privacy.",
     details: "Window blinds combine practicality with elegance, allowing precise control over light and privacy. Available in a variety of materials, colors, and styles, they enhance the interior design while offering durability, ease of cleaning, and customizable options to suit every room’s ambiance."
@@ -88,7 +88,7 @@ const products = [
     details: "Shera planks offer the natural aesthetic of wood combined with exceptional durability. Made from fiber cement, they resist moisture, termites, and weathering, making them ideal for exterior cladding and decking. They provide a sustainable, long-lasting alternative to traditional wood."
   },
   {
-    image: "hpl.webp",
+    image: "hpl2.webp",
     name: "HPL Cladding",
     description: "High-pressure laminate cladding ideal for exterior facades with UV and weather protection.",
     details: "HPL cladding is engineered to withstand harsh environmental conditions while enhancing the building’s exterior. It is UV-resistant, weatherproof, and low-maintenance, providing a stylish, modern look for façades while ensuring long-term performance."
