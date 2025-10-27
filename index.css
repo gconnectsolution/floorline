@@ -1189,7 +1189,7 @@ img {
     border-top: 1px solid rgba(254, 215, 170, 0.5);
     padding: var(--spacing-12) 5rem;
     background-color: #ff7835;
-    height: 100vh;
+    height: 92vh;
 }
 
 .footer-logo{
@@ -1235,7 +1235,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 
@@ -1254,15 +1254,12 @@ img {
   margin: 0 auto;
 }
 
-
-
-
 .card {
   position: absolute;
-  top: -38%;
+  top: -10%;
   left: 10%;
-  width: 250px;
-  height: 350px;
+  width: 150px;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
