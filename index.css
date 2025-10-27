@@ -81,7 +81,7 @@ body {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(60px);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /* When in view */
@@ -1189,7 +1189,7 @@ img {
     border-top: 1px solid rgba(254, 215, 170, 0.5);
     padding: var(--spacing-12) 5rem;
     background-color: #ff7835;
-    height: 90vh;
+    height: 91vh;
 }
 
 .footer-logo{
@@ -1200,7 +1200,7 @@ img {
 
 .footer-details{
     width: 50% ;
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
     text-align: left;
 }
 
@@ -1235,6 +1235,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 4rem 0;
 }
 
 
@@ -1253,30 +1254,21 @@ img {
   margin: 0 auto;
 }
 
-.card {
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
 
-.card-holder {
-  position: relative;
-  width: 300px;
-  height: 200px;
-}
+
 
 .card {
   position: absolute;
-  left: 30%;
-  width: 150px;
-  height: 200px;
+  top: -25%;
+  left: 10%;
+  width: 200px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
   object-fit: cover;
+  padding: 1rem 0.1rem;
+  background-color: #fff;
 }
 
 /* Default: straight */
@@ -1333,6 +1325,8 @@ img {
     .card {
         top: -10%;
         left: 25%;
+        height: 200px;
+        width: 150px;
     }
     .footer{
         padding: 1rem 0;
