@@ -556,3 +556,33 @@ footer {
 .product-info-card:nth-child(even).visible {
   transition-delay: 0.2s;
 }
+
+
+.product-info-card .product-info-image-two {
+  order: 1;
+}
+.product-info-card .product-info-details-two {
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .product-info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Swap order only for the second type */
+  .product-info-card .product-info-details-two {
+    order: 1;
+  }
+  .product-info-card .product-info-image-two {
+    order: 2;
+  }
+
+  .product-info-image-two img,
+  .product-info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}

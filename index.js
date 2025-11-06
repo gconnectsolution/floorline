@@ -17,7 +17,7 @@ mobileMenuBtn.addEventListener('click', () => {
 const products = [
   {
     image: "laminated.webp",
-    name: "Laminated Wooden Flooring",
+    name: "Laminate Wooden Flooring",
     description: "Scratch-resistant and affordable flooring that mimics the look of real wood.",
     details: "Our laminated wooden flooring offers the timeless beauty of natural wood with added durability. It is scratch-resistant, easy to clean, and resistant to fading, making it perfect for high-traffic areas. Ideal for homes and offices, it provides a warm, inviting atmosphere while being budget-friendly and eco-conscious."
   },
@@ -35,13 +35,13 @@ const products = [
   },
   {
     image: "./WhatsApp Image 2025-10-24 at 12.32.43 PM.jpeg",
-    name: "Solid Wood Flooring",
+    name: "Solid wood-Wpc dial deck",
     description: "Authentic hardwood flooring that adds warmth, character, and long-lasting beauty.",
     details: "Solid wood flooring is made from 100% natural hardwood, providing unmatched warmth, character, and timeless appeal. Each plank is unique, enhancing the aesthetics of your home. With proper care, it can last for decades, making it a valuable and sustainable choice for both residential and commercial spaces."
   },
   {
     image: "./WhatsApp Image 2025-10-24 at 12.32.42 PM (1).jpeg",
-    name: "WPC Deck Flooring",
+    name: "Wpc-Ipe wood",
     description: "Weatherproof WPC decking ideal for outdoor patios, balconies, and gardens.",
     details: "WPC deck flooring is a high-quality composite of wood fibers and plastic, making it weatherproof, termite-resistant, and easy to maintain. Its natural wood-like finish enhances outdoor spaces such as patios, balconies, and gardens, providing a stylish and long-lasting solution for any exterior environment."
   },
@@ -53,7 +53,7 @@ const products = [
   },
   {
     image: "ipe.webp",
-    name: "IPE Deck Flooring",
+    name: "IPE Wood",
     description: "High-density hardwood decking known for extreme durability and natural beauty.",
     details: "IPE deck flooring is made from exotic, high-density hardwood that is naturally resistant to decay, termites, and harsh weather. Its rich color and fine grain provide an exquisite natural look. Perfect for premium outdoor decks, it combines longevity, elegance, and minimal maintenance."
   },
@@ -89,7 +89,7 @@ const products = [
   },
   {
     image: "hpl2.webp",
-    name: "HPL Cladding",
+    name: "Louvers",
     description: "High-pressure laminate cladding ideal for exterior facades with UV and weather protection.",
     details: "HPL cladding is engineered to withstand harsh environmental conditions while enhancing the building’s exterior. It is UV-resistant, weatherproof, and low-maintenance, providing a stylish, modern look for façades while ensuring long-term performance."
   },
@@ -170,7 +170,7 @@ popupOverlay.addEventListener("click", (e) => {
 
 // Auto-scroll using transform for iOS compatibility
 let position = 0;
-const speed = 0.3; // Adjust scroll speed (pixels/frame)
+const speed = 1; // Adjust scroll speed (pixels/frame)
 
 function scrollLoop() {
   if (isScrolling) {
@@ -222,7 +222,7 @@ const contactMb = document.getElementById('Contact-mobile');
 home.onclick = () => scrollToSectionWithOffset('hero', 100);
 product.onclick = () => window.location.href = './products.html';
 choose.onclick = () => scrollToSectionWithOffset('whychooseus', 150);
-contact.onclick = () => scrollToSectionWithOffset('contactus', 81);
+contact.onclick = () => scrollToSectionWithOffset('contactus', 83);
 
 // Mobile clicks
 homeMb.onclick = () => scrollToSectionWithOffset('hero', 300);

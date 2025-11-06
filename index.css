@@ -1415,8 +1415,6 @@ img {
   -webkit-overflow-scrolling: touch;
 }
 
-
-
 .products-row {
   display: flex;
   gap: 20px;
@@ -1431,7 +1429,6 @@ img {
   from { transform: translateX(0); -webkit-transform: translateX(0); }
   to { transform: translateX(-50%); -webkit-transform: translateX(-50%); }
 }
-
 
 .product-card {
   width: 300px;
